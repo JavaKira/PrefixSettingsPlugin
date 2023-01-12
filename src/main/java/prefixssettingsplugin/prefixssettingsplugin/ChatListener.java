@@ -18,10 +18,11 @@ public class ChatListener implements Listener {
             TextComponent.Builder builder = Component.text();
 
             if (!source.hasMetadata("prefix"))
-                builder.append(Component.text(Objects.requireNonNull(source.getMetadata("prefix").get(0).value()).toString()));
+                builder
+                    .append(Component.text(Objects.requireNonNull(source.getMetadata("prefix").get(0).value()).toString()))
+                    .append(Component.text(" "));
 
             return builder
-                    .append(Component.text(" "))
                     .append(sourceDisplayName.color(TextColor.fromHexString("#a8a432")))
                     .append(Component.text(" : "))
                     .append(message)

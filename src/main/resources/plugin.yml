@@ -1,0 +1,9 @@
+name: PrefixsSettingsPlugin
+version: '${version}'
+commands:
+  prefix:
+    description: uses to set prefix
+    usage: /prefix
+main: prefixssettingsplugin.prefixssettingsplugin.PrefixsSettingsPlugin
+api-version: 1.19
+authors: [ JavaKira ]
